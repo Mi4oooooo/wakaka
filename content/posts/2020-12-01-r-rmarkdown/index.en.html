@@ -12,23 +12,39 @@ tags: ["R Markdown", "plot", "regression"]
 <h1>R Markdown</h1>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
+<pre class="r"><code>
+
+##p <- data %>%
+##  mutate(gdpPercap=round(gdpPercap,0)) %>%
+##  mutate(pop=round(pop/1000000,2)) %>%
+##  mutate(lifeExp=round(lifeExp,1)) %>%
+##  
+##
+##  arrange(desc(pop)) %>%
+##  mutate(country = factor(country, country)) %>%
+##  
+##
+##  mutate(text = paste("Country: ", country, "\nPopulation (M): ", pop, "\nLife Expectancy: ", lifeExp, "\nGdp per capita: ", gdpPercap, sep="")) %>%
+##  
+##
+##  ggplot( aes(x=gdpPercap, y=lifeExp, size = pop, color = continent, text=text)) +
+##    geom_point(alpha=0.7) +
+##    scale_size(range = c(1.4, 19), name="Population (M)") +
+##    scale_color_viridis(discrete=TRUE, guide=FALSE) +
+##    theme_ipsum() +
+##    theme(legend.position="none")
+##
+##pp <- ggplotly(p, tooltip="text")
+##pp
+
+<img src="index.en_files/figure-html/27.png" alt="27" width="672" />
+
+
+
+
+
+
+</code></pre>
 </div>
 <div id="including-plots" class="section level1">
 <h1></h1>
@@ -36,7 +52,7 @@ fit
 <pre class="r"><code>par(mar = c(0, 1, 0, 1))
 </code></pre>
 <div class="figure"><span style="display:block;" id="fig:pie"></span>
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/27.png" alt="A fancy pie chart." width="672" />
 <p class="caption">
 
 </p>
