@@ -3,7 +3,7 @@
     "path": "~/wakaka/content/posts/2020-12-01-r-rmarkdown/index.en.html",
     "project_path": "content/posts/2020-12-01-r-rmarkdown/index.en.html",
     "type": "html",
-    "hash": "0",
+    "hash": "1469542747",
     "contents": "",
     "dirty": false,
     "created": 1667475161041.0,
@@ -11,14 +11,16 @@
     "relative_order": 5,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "16,35",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1667456499,
+    "lastKnownWriteTime": 1667477606,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1667456499,
+    "last_content_update": 1667477606954,
     "read_only": false,
     "read_only_alternatives": []
 }
